@@ -12,10 +12,17 @@ logging:
         boot: INFO
         web: INFO
 
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://tracing-server:9411/api/v2/spans
+
 ---
 spring:
   config:
     activate:
       on-profile: docker
     import: configserver:http://config-server:8888
-

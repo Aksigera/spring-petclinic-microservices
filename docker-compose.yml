@@ -25,6 +25,7 @@ services:
     depends_on:
      - config-server
      - discovery-server
+     - tracing-server
     entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
     - 8081:8081
@@ -36,6 +37,7 @@ services:
     depends_on:
      - config-server
      - discovery-server
+     - tracing-server
     entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
      - 8082:8082
@@ -47,6 +49,7 @@ services:
     depends_on:
      - config-server
      - discovery-server
+     - tracing-server
     entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
      - 8083:8083
@@ -58,6 +61,7 @@ services:
     depends_on:
      - config-server
      - discovery-server
+     - tracing-server
     entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
      - 8080:8080
@@ -78,6 +82,7 @@ services:
     depends_on:
      - config-server
      - discovery-server
+     - tracing-server
     entrypoint: ["./dockerize","-wait=tcp://discovery-server:8761","-timeout=60s","--","java", "org.springframework.boot.loader.JarLauncher"]
     ports:
      - 9090:9090

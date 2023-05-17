@@ -50,7 +50,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>spring-cloud-starter-config
+            <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>chaos-monkey-spring-boot</artifactId>
                 <version>${chaos-monkey-spring-boot.version}</version>

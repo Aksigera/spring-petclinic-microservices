@@ -29,6 +29,7 @@
         <java.version>17</java.version>
         <assertj.version>3.17.1</assertj.version>
 
+<!--        <release.train.version>2022.0.1</release.train.version>-->
         <spring-cloud.version>2022.0.1</spring-cloud.version>
         <chaos-monkey-spring-boot.version>2.3.10</chaos-monkey-spring-boot.version>
         <jolokia-core.version>1.7.1</jolokia-core.version>
@@ -64,6 +65,10 @@
                 <artifactId>assertj-core</artifactId>
                 <version>${assertj.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-sleuth</artifactId>
             </dependency>
         </dependencies>
     </dependencyManagement>
